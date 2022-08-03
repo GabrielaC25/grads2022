@@ -37,9 +37,9 @@ public class HomeworkTwitter {
                 .basePath("/j3r3my84")
                 .auth()
                 .oauth(apiKey, apiKeySecret, accessToken, accessTokeenSecret)
-                .queryParam("id", "1554828407279480833").log().all()
+                .queryParam("id", 278136668).log().all()
                 .when()
-                .get("https://api.twitter.com/1.1/statuses/lookup.json")
+                .get("https://api.twitter.com/1.1/statuses/user_timeline.json")
                 .then().log().all()
                 .statusCode(200);
     }
